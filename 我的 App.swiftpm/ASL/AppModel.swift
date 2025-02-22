@@ -17,6 +17,9 @@ final class AppModel: ObservableObject {
     // Hand keypoints for drawing the overlay (normalized points)
     @Published var handKeypoints: [CGPoint] = []
     
+    // (New) Track a specific fingertip location (e.g. index tip) in normalized coordinates
+    @Published var indexFingerTipLocation: CGPoint? = nil
+    
     var camera: MLCamera = MLCamera()
     
     private var cancellables = Set<AnyCancellable>()
